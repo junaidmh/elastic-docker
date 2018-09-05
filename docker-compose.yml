@@ -3,8 +3,7 @@ version: '3.2'
 services:
 
   elasticsearch:
-    build:
-      context: elasticsearch/
+    image: jaywanii/elk-es
     volumes:
       - ./elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml:ro
     ports:
@@ -16,8 +15,7 @@ services:
       - elk
 
   logstash:
-    build:
-      context: logstash/
+    image: jaywanii/elk-logstash
     volumes:
       - ./logstash/config/logstash.yml:/usr/share/logstash/config/logstash.yml:ro
       - ./logstash/pipeline:/usr/share/logstash/pipeline:ro
@@ -31,8 +29,7 @@ services:
       - elasticsearch
 
   kibana:
-    build:
-      context: kibana/
+    image: jaywanii/elk-kibana 
     volumes:
       - ./kibana/config/:/usr/share/kibana/config:ro
     ports:
