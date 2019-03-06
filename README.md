@@ -1,5 +1,16 @@
 # Elastic Stack - Using Docker
 
+Aim:-
+
+A templatized ELK setup for centralized logging across Application, Load Balancer, Webserver & Infra. Using pre-defined Logstash patterns for log parsing and actionable analysis.  1 Click docker container based, customizable ELK setup for POC’s. 
+
+Uses:-
+ 
+* Reduces the learning curve for ELK.
+* Ready to use dashboards with all standard metrics.
+* Brings transparency across App, webserver & infra logs & events 
+ 
+
 
 All the imaages used are based on the official Docker images:
 
